@@ -2,7 +2,7 @@
 
 Link: sourceforge.net/projects/red-db/
 
-SRDB (aka red-db) is a **from-scratch, lightweight, persistent client-server RDBMS** written entirely in modern **C++14+**. Designed for simplicity, reliability, and educational value, it implements a full SQL engine without relying on heavy external database libraries.
+SRDB (aka red-db) is a **from-scratch, lightweight, persistent client-server RDBMS** written entirely in **C++14**. Designed for simplicity, reliability, and educational value, it implements a full SQL engine without relying on heavy external database libraries.
 
 
 ![SRDB Terminal Demo 1](https://a.fsdn.com/con/app/proj/red-db/screenshots/srdb02-79680f8a.png/max/max/1)
@@ -27,6 +27,18 @@ SRDB (aka red-db) is a **from-scratch, lightweight, persistent client-server RDB
 - **Client**: ncurses + readline terminal interface with command history
 - **Schema**: Persistent JSON format (json-glib)
 - **Reliability**: Valgrind-clean, shared/unique locking, foreign/unique key enforcement
+
+## Security & Deployment
+
+SRDB was designed with security and operational reliability in mind:
+
+- **Installer** (`redb_install_db`): Fully automated setup that creates the credential and privilege tables, generates cryptographic material, bootstraps the root user, and drops privileges to a dedicated `redb` system user.
+- **Reader/Writer Locking**: RAII `shared_lock` and `unique_lock` classes built on `pthread_rwlock_t` for safe concurrent access to tables and the B+Tree.
+- **End-to-End Encryption**: Asymmetric RSA key exchange (libgcrypt) for client authentication and statement encryption + SHA-256 password hashing.
+- **Systemd Integration**: Production-ready service file + helper script that creates secure directories (`/var/lib/redb`, `/tmp/redb`), sets correct ownership/permissions, and starts the daemon as non-root.
+- **Data Integrity**: Strict per-column validation (type, size, NOT NULL, auto-increment, foreign/primary key checks) inside the `row` class.
+
+These features make SRDB suitable as a lightweight, self-contained database for tools, testing, or learning systems programming.
 
 ## Tech Stack
 
@@ -55,25 +67,25 @@ Host and Service Settings
 On the client, the hostname 'redbhost' must be set in the /etc/hosts file.
 
 Example:
-
+```bash
 192.168.0.10    redbhost
-
+```
 On the client and the server, the service 'redb' must be set in the
 /etc/services file.
 
 Example:
-
+```bash
 redb             40004/tcp    # redb Server
-
+```
 Firewall Settings
 =================
 
 If necessary, be sure to open the 'redb' port in your firewall.
-
+```bash
 Example: (as root)
 
 iptables -I INPUT 1 -p tcp -dport redb -j ACCEPT
-
+```
 Compiler Requirements
 =====================
 
@@ -81,52 +93,56 @@ C++14 or higher
 
 Recommended Configure Command
 =============================
-
+```bash
 ./configure CXX=g++-7 CXXFLAGS="-O2 -std=c++14"
-
+```
 Initial Server Startup
 ======================
-
+```bash
 systemctl enable redb.service
-systemctl start redb.service
 
+systemctl start redb.service
+```
 At this point server (redd) is running and will start each time OS boots.
 
 Stopping Server
 ===============
-
+```bash
 systemctl stop redb.service
-
+```
 Starting Server
 ===============
-
+```bash
 systemctl start redb.service
-
+```
 Initial Login and Security
 ==========================
 
 Initially user root has no password.
-
+```bash
 Initial user: root
+
 Initial password: <none>
-
+```
 Log into server as root as follows:
-
+```bash
   redcli -u root
-
+```
 If the server is running the client will provide the following prompt:
-
+```bash
   redb>
-
+```
 At this point use the ALTER USER statement to set a password for root.
 
 Client Syntax
 =============
 
 []  denotes optional parameter
-
+```bash
 redcli -u <username> [-p]
+```
   -u    username option (required)
+  
   -p    password option (prompts user for password)
 
 History File
@@ -146,7 +162,9 @@ statements that use INTO OUTFILE. See examples below.
 Examples:
 
 LOAD DATA INFILE 'filename' ...;
+
 SELECT ... INTO OUTFILE 'filename';
+
 SOURCE 'filename';
 
 NOTE: Set owner and group of scripts copied to /tmp/redb to redb:root. Set
