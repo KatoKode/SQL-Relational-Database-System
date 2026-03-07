@@ -1,6 +1,6 @@
 # SRDB (red-db) – Lightweight Client-Server SQL Relational Database
 
-Link: sourceforge.net/projects/red-db/
+Original Link: sourceforge.net/projects/red-db/
 
 SRDB (aka red-db) is a **from-scratch, lightweight, persistent client-server RDBMS** written entirely in **C++14**. Designed for simplicity, reliability, and educational value, it implements a full SQL engine without relying on heavy external database libraries.
 
