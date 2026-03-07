@@ -1,0 +1,13 @@
+[Unit]
+Description=RedB Server
+Wants=basic.target
+After=basic.target network.target
+
+[Service]
+Restart=on-abort
+Type=simple
+ExecStartPre=/usr/lib/redb/redb-systemd-helper install
+ExecStart=/usr/lib/redb/redb-systemd-helper start
+
+[Install]
+WantedBy=multi-user.target

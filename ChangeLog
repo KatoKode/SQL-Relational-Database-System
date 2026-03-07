@@ -1,0 +1,23 @@
+[red-db-1.0]
+Initial Release
+[red-db-1.1]
+Fixed server socket time-out that caused system abort every two hours.
+Fixed client socket time-out that caused client to abort.
+Fixed server abort due to syntax error involving asterisk.
+Fixed outfile so that numeric (non-text) values are not enclosed in quotation marks.
+Merged 'tcp' and 'sndrcv' libraries into library 'comm' to stream-line the communication library. 
+Minor stream-lining of virtual machine (vm) library.
+Minor changes to server (srv) to accomodate new 'comm' library.
+Minor changes to client (cli) to accomodate new 'comm' library.
+[red-db-1.2]
+Fixed server race when column defined with auto_increment.
+Fixed null value translation. Null values did not translate unless enclosed in quotes.
+Finished support for DATE, DATETIME and TIMESTAMP column types.
+[red-db-1.3]
+Fixed issue where combination of USING and ON conditions returned empty result.
+[red-db-1.4]
+Increased number of column names in USING clause.
+[red-db-1.5]
+Fixed server where null values were saved incorrectly.
+[red-db-1.6]
+Fixed server where plain-text password was being prepended to hashed password.

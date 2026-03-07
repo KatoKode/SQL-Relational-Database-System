@@ -1,0 +1,55 @@
+#!/bin/sh
+#
+
+redb_install() {
+  if [[ ! -d /tmp/redb ]]; then
+    # make and configure tmp-dir
+    mkdir /tmp/redb
+    chmod 700 /tmp/redb
+    chown redb:root /tmp/redb
+  fi
+
+  if [[ ! -d /var/lib/redb ]]; then
+    # make and configure data-dir
+    mkdir -p /var/lib/redb
+    chmod 755 /var/lib/redb
+    chown redb:root /var/lib/redb
+    # make and configure etc-dir
+    mkdir /var/lib/redb/etc
+    chmod 700 /var/lib/redb/etc
+    chown redb:redb /var/lib/redb/etc
+    # make and configure log-dir
+    mkdir /var/lib/redb/log
+    chmod 700 /var/lib/redb/log
+    chown redb:redb /var/lib/redb/log
+    # make system files
+    /usr/sbin/redb_install_db --user=redb
+  fi
+}
+
+redb_start() {
+  exec /usr/sbin/redd --user=redb
+}
+
+redb_wait() {
+  for i in {1..60}; do
+    if [[ ! -s /var/lib/redb/etc/cred.d ]]; then
+      sleep 1
+    fi
+  done
+}
+
+umask 077
+mkdir -p /var/run/redb
+chmod 755 /var/run/redb
+chown --no-dereference redb:redb /var/run/redb
+
+case "${1}" in
+  install)
+    redb_install ;;
+  start)
+    redb_start ;;
+  wait)
+    redb_wait ;;
+  *) ;;
+esac
