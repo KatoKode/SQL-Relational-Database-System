@@ -22,7 +22,7 @@ SRDB (aka red-db) is a **lightweight, persistent client-server RDBMS** written e
   - LOAD DATA INFILE / SELECT ... INTO OUTFILE
   - SOURCE for script execution
 - **Storage Engine**: Disk-based **B+Tree** with sibling-linked leaves, block caching, background flush thread
-- **Query Execution**: Hand-written recursive-descent parser → bytecode compiler → virtual machine
+- **Query Execution**: Hand-written recursive-descent parser >> bytecode compiler >> virtual machine
 - **Networking & Security**:
   - Multi-threaded TCP server (per-client FSM threads)
   - Encrypted credentials & statements (libgcrypt)
