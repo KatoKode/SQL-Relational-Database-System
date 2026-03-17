@@ -7,10 +7,9 @@ Original Link: sourceforge.net/projects/red-db/
 
 SRDB (aka red-db) is a **lightweight, persistent client-server RDBMS** written entirely in **C++14**. Designed for simplicity, reliability, and educational value, it implements a full SQL engine without relying on heavy external database libraries.
 
+![srdb_00](https://github.com/user-attachments/assets/3364fa85-1d9b-45b3-8558-a77334c6ec09)
 
-![SRDB Terminal Demo 1](https://a.fsdn.com/con/app/proj/red-db/screenshots/srdb02-79680f8a.png/max/max/1)
-
-![SRDB Terminal Demo 2](https://a.fsdn.com/con/app/proj/red-db/screenshots/srdb01-a27c4cc8.png/max/max/1)
+![srdb_01](https://github.com/user-attachments/assets/e938418e-9753-4e2c-9457-acb7b1eb4b07)
 
 *(Interactive terminal client showing SELECT with WHERE and ORDER BY, computed expressions, and formatted output)*
 
