@@ -19,11 +19,11 @@ SRDB (aka red-db) is a **lightweight, persistent client-server RDBMS** written i
 *(Interactive terminal client showing SELECT with WHERE and ORDER BY, computed expressions, and formatted output)*
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/2f96b8ff-927e-4e8c-9021-3548da5507fb"
+  <img src="https://github.com/user-attachments/assets/32b940c8-fcca-4183-b72c-142b3cb946a4"
        height="700"
        width="48%" 
        alt="Neon green terminal screenshot 5">
-  <img src="https://github.com/user-attachments/assets/330f97a5-4e6b-47fc-88ad-8fa0fee203e1"
+  <img src="https://github.com/user-attachments/assets/022dbb21-ebb0-4c6b-8004-b70371360355"
        height="700"
        width="48%" 
        alt="Neon green terminal screenshot 6">
@@ -32,11 +32,11 @@ SRDB (aka red-db) is a **lightweight, persistent client-server RDBMS** written i
 *(Interactive terminal client showing CREATE USER, GRANT, SELECT, and formatted output)*
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/75a4b13d-e34c-4612-adb7-0459d1ed340d"
+  <img src="https://github.com/user-attachments/assets/0990cab3-634e-4c22-8f02-7c88a3250ee7"
        height="700"
        width="48%" 
        alt="Neon green terminal screenshot 3">
-  <img src="https://github.com/user-attachments/assets/07111896-3bd4-4756-bff9-efada199a444"
+  <img src="https://github.com/user-attachments/assets/5bc49308-77f1-4c04-8f34-703f3bb6c535"
        height="700"
        width="48%" 
        alt="Neon green terminal screenshot 4">
