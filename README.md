@@ -3,8 +3,6 @@
 [![License: GPL-2.0](https://img.shields.io/badge/License-GPL%202.0-blue.svg)](https://opensource.org/licenses/GPL-2.0)
 [![Stars](https://img.shields.io/github/stars/KatoKode/SQL-Relational-Database-System?style=social)](https://github.com/KatoKode/SQL-Relational-Database-System/stargazers)
 
-Original Link: sourceforge.net/projects/red-db/
-
 SRDB (aka red-db) is a **lightweight, persistent client-server RDBMS** written in **C and C++14**. Designed for simplicity, reliability, and educational value, it implements a full SQL engine without relying on heavy external database libraries.
 
 <div align="center">
