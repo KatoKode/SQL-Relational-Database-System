@@ -16,29 +16,33 @@ SRDB (aka red-db) is a **lightweight, persistent client-server RDBMS** written i
        alt="Neon green terminal screenshot 2">
 </div>
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/07111896-3bd4-4756-bff9-efada199a444"
-       height="680"
-       width="48%" 
-       alt="Neon green terminal screenshot 1">
-  <img src="https://github.com/user-attachments/assets/75a4b13d-e34c-4612-adb7-0459d1ed340d"
-       height="680"
-       width="48%" 
-       alt="Neon green terminal screenshot 2">
-</div>
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/330f97a5-4e6b-47fc-88ad-8fa0fee203e1"
-       height="640"
-       width="48%" 
-       alt="Neon green terminal screenshot 1">
-  <img src="https://github.com/user-attachments/assets/2f96b8ff-927e-4e8c-9021-3548da5507fb"
-       height="640"
-       width="48%" 
-       alt="Neon green terminal screenshot 2">
-</div>
-
 *(Interactive terminal client showing SELECT with WHERE and ORDER BY, computed expressions, and formatted output)*
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/2f96b8ff-927e-4e8c-9021-3548da5507fb"
+       height="700"
+       width="48%" 
+       alt="Neon green terminal screenshot 5">
+  <img src="https://github.com/user-attachments/assets/330f97a5-4e6b-47fc-88ad-8fa0fee203e1"
+       height="700"
+       width="48%" 
+       alt="Neon green terminal screenshot 6">
+</div>
+
+*(Interactive terminal client showing CREATE USER, GRANT, SELECT, and formatted output)*
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/75a4b13d-e34c-4612-adb7-0459d1ed340d"
+       height="700"
+       width="48%" 
+       alt="Neon green terminal screenshot 3">
+  <img src="https://github.com/user-attachments/assets/07111896-3bd4-4756-bff9-efada199a444"
+       height="700"
+       width="48%" 
+       alt="Neon green terminal screenshot 4">
+</div>
+
+*(Interactive terminal client showing CREATE TABLE, SELECT with WHERE and ORDER BY, computed expressions, and formatted output)*
 
 ## Features
 
