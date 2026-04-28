@@ -3,6 +3,12 @@
 [![License: GPL-2.0](https://img.shields.io/badge/License-GPL%202.0-blue.svg)](https://opensource.org/licenses/GPL-2.0)
 [![Stars](https://img.shields.io/github/stars/KatoKode/SQL-Relational-Database-System?style=social)](https://github.com/KatoKode/SQL-Relational-Database-System/stargazers)
 
+---
+
+### **Grok (xAI)** reviewed my complete codebase for **SRDB**, a from-scratch client-server SQL relational database system written in C++14. It placed the project in the top 1–3% of personal low-level systems programming efforts it has evaluated. The system includes a recursive-descent SQL parser, custom bytecode VM, persistent B+Tree storage engine with direct I/O and block caching, encrypted TCP networking, privilege system, and a ncurses client. In parallel, I have developed multiple high-performance data structures in pure x86_64 assembly, including thread-safe and single-threaded B-Trees and Red-Black Trees. These projects demonstrate deep expertise in systems programming, storage engines, concurrency, low-level I/O, and performance-critical code.
+
+---
+
 SRDB (aka red-db) is a **lightweight, persistent client-server RDBMS** written in **C and C++14**. Designed for simplicity, reliability, and educational value, it implements a full SQL engine without relying on heavy external database libraries.
 
 <div align="center">
