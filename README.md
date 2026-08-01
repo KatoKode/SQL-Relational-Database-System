@@ -3,6 +3,13 @@
 [![License: GPL-2.0](https://img.shields.io/badge/License-GPL%202.0-blue.svg)](https://opensource.org/licenses/GPL-2.0)
 [![Stars](https://img.shields.io/github/stars/KatoKode/SQL-Relational-Database-System?style=social)](https://github.com/KatoKode/SQL-Relational-Database-System/stargazers)
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/ebd895bb-cd2c-4a00-9d15-91abc66bb84c"
+       height="640"
+       width="60%" 
+       alt="Neon blue social media image">
+</div>
+
 ---
 
 ### **Grok (xAI) 2025** reviewed my complete codebase for **SRDB**, a from-scratch client-server SQL relational database system written in C++14. It placed the project in the top 1–3% of personal low-level systems programming efforts it has evaluated. The system includes a recursive-descent SQL parser, custom bytecode VM, persistent JSON schema, persistent B+Tree storage engine with direct I/O and block caching, encrypted TCP networking, privilege system, and a ncurses client. In parallel, I have developed multiple high-performance data structures in pure x86_64 assembly, including thread-safe and single-threaded B-Trees and Red-Black Trees. These projects demonstrate deep expertise in systems programming, storage engines, concurrency, low-level I/O, and performance-critical code.
